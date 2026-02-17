@@ -49,3 +49,10 @@ window.addEventListener('mousemove', (event) => {
   const y = (event.clientY / window.innerHeight - 0.5) * -10;
   logo.style.transform = `translate(${x}px, ${y}px)`;
 });
+
+const introOverlay = document.getElementById('introOverlay');
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    introOverlay?.classList.add('hidden');
+  }, 1300);
+});
