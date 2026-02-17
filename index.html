@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>evensora — landing</title>
+    <meta
+      name="description"
+      content="Landing page style bio-link inspirée de juju.lol avec animations et cartes sociales."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <main class="card" role="main">
+      <div class="status">● Online</div>
+      <img
+        class="avatar"
+        src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=300&q=80"
+        alt="Photo de profil"
+      />
+      <h1>@evensora</h1>
+      <p class="subtitle">creative dev • design addict • night coder</p>
+
+      <div class="badges" aria-label="Centres d'intérêt">
+        <span>UI/UX</span>
+        <span>Motion</span>
+        <span>Web</span>
+      </div>
+
+      <nav class="links" aria-label="Liens sociaux">
+        <a href="#" target="_blank" rel="noreferrer">Discord</a>
+        <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#" target="_blank" rel="noreferrer">TikTok</a>
+        <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+      </nav>
+
+      <button id="musicToggle" class="music" type="button">♫ Ambience: OFF</button>
+      <audio id="ambient" loop preload="none">
+        <source
+          src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_1a43f6f07f.mp3?filename=dreamscape-110624.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
