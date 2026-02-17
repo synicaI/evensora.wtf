@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evensora.wtf</title>
-    <meta name="description" content="evensora.wtf — hubs, pricing, FAQ, et présentation visuelle." />
+    <meta name="description" content="evensora.wtf — clean landing with hub, lifetime key plan, FAQ and fake Luau editor." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
     <header class="topbar">
       <a class="brand" href="#intro">evensora.wtf</a>
       <nav>
-        <a href="#hubs">Hubs</a>
+        <a href="#hub">Hub</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -27,99 +27,69 @@
         <div class="hero-text">
           <p class="eyebrow">INTRO</p>
           <h1>evensora.wtf</h1>
-          <p class="lead">Un site pleine largeur, style neon/glass, avec sections hubs, pricing, FAQ et un faux éditeur de code Luau.</p>
+          <p class="lead">A cleaner, full-resolution landing page with one focused hub, one lifetime key plan, an FAQ, and a fake Luau editor.</p>
           <div class="hero-actions">
-            <a href="#hubs" class="btn primary">Voir les hubs</a>
-            <a href="#pricing" class="btn ghost">Comparer les plans</a>
+            <a href="#pricing" class="btn primary">Get Lifetime Key</a>
+            <a href="#faq" class="btn ghost">Read FAQ</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="Visuel logo neon">
-          <div class="logo-wrap">
-            <div class="logo-e">e</div>
-          </div>
+        <div class="hero-art" aria-label="Neon logo visual">
+          <div class="logo-wrap"><div class="logo-e">e</div></div>
         </div>
       </section>
 
-      <section id="hubs" class="section">
-        <p class="eyebrow">HUBS</p>
-        <h2>Many hubs</h2>
-        <div class="grid hubs">
-          <article class="panel"><h3>Vital Hub</h3><p>Performance presets, workflow rapide, dashboard clean.</p></article>
-          <article class="panel"><h3>Core Hub</h3><p>Réglages généraux, préférences profil, sync multi-devices.</p></article>
-          <article class="panel"><h3>Visual Hub</h3><p>Thèmes, effets, palettes et configuration d’UI avancée.</p></article>
-          <article class="panel"><h3>Safety Hub</h3><p>Logs, permissions, et protections d’accès basiques.</p></article>
-          <article class="panel"><h3>Inventory Hub</h3><p>Slots, templates et organisation rapide des ressources.</p></article>
-          <article class="panel"><h3>Community Hub</h3><p>Notes partagées, changelogs et roadmap publique.</p></article>
-        </div>
+      <section id="hub" class="section">
+        <p class="eyebrow">HUB</p>
+        <h2>One clean control hub</h2>
+        <article class="panel hub-panel">
+          <h3>Evensora Control Hub</h3>
+          <p>Minimal and clean layout for key status, quick settings, visual presets, and update notices in one place.</p>
+          <ul>
+            <li>Quick setup onboarding</li>
+            <li>Single dashboard workflow</li>
+            <li>Clean cards and readable labels</li>
+          </ul>
+        </article>
       </section>
 
       <section id="pricing" class="section">
         <p class="eyebrow">PRICING</p>
-        <h2>Choisis ton plan</h2>
-        <div class="grid pricing">
-          <article class="panel plan">
-            <h3>Starter</h3>
-            <p class="price">0€<span>/mo</span></p>
-            <ul>
-              <li>1 workspace</li>
-              <li>Theme de base</li>
-              <li>Support community</li>
-            </ul>
-            <button class="btn primary" type="button">Commencer</button>
-          </article>
+        <h2>Simple pricing</h2>
+        <div class="pricing-single">
           <article class="panel plan featured">
-            <h3>Pro</h3>
-            <p class="price">12€<span>/mo</span></p>
+            <h3>Lifetime Key</h3>
+            <p class="price">39€ <span>one-time</span></p>
             <ul>
-              <li>Hubs complets</li>
-              <li>Animations premium</li>
-              <li>Priority support</li>
+              <li>Permanent access</li>
+              <li>Discord updates and support</li>
+              <li>Clean dashboard presets</li>
             </ul>
-            <button class="btn primary" type="button">Choisir Pro</button>
-          </article>
-          <article class="panel plan">
-            <h3>Team</h3>
-            <p class="price">29€<span>/mo</span></p>
-            <ul>
-              <li>Jusqu’à 10 membres</li>
-              <li>Admin console</li>
-              <li>Integrations avancées</li>
-            </ul>
-            <button class="btn primary" type="button">Contacter</button>
+            <button class="btn primary" type="button">Buy Lifetime</button>
           </article>
         </div>
       </section>
 
-      <section class="section code-section" aria-label="Faux éditeur Luau">
-        <p class="eyebrow">CODE</p>
-        <h2>Fake Luau Editor</h2>
+      <section class="section code-section" aria-label="Fake Luau editor">
+        <p class="eyebrow">EDITOR</p>
+        <h2>Fake Luau Editor (syntax highlighted)</h2>
         <div class="editor">
-          <div class="editor-bar">
-            <span></span><span></span><span></span>
-            <strong>main.luau</strong>
-          </div>
-          <pre><code>-- Faux exemple visuel (non-opérationnel)
-getgenv().evensora = {
-  Vital = {
-    Key = "your key here",
-    FpsCap = 160,
-    UnloadKey = Enum.KeyCode.End,
+          <div class="editor-bar"><span></span><span></span><span></span><strong>main.luau</strong></div>
+          <pre><code><span class="tok-com">--[[ Demo text block for landing preview (non-operational) ]]</span>
+<span class="tok-fn">getgenv</span>()<span class="tok-op">.</span>evensora <span class="tok-op">=</span> {
+  <span class="tok-key">Vital</span> <span class="tok-op">=</span> {
+    <span class="tok-key">Key</span> <span class="tok-op">=</span> <span class="tok-str">"your key here"</span>,
+    <span class="tok-key">FpsCap</span> <span class="tok-op">=</span> <span class="tok-num">160</span>,
+    <span class="tok-key">UnloadKey</span> <span class="tok-op">=</span> Enum.KeyCode.End,
+    <span class="tok-key">UniversalMode</span> <span class="tok-op">=</span> <span class="tok-kw">false</span>,
   },
-  Heading = {
-    SilentAim = {
-      Enabled = false,
-      AimPart = "Closest",
-      Fov = 100,
-    },
+  <span class="tok-key">Heading</span> <span class="tok-op">=</span> {
+    <span class="tok-key">SilentAim</span> <span class="tok-op">=</span> { <span class="tok-key">HitChance</span> <span class="tok-op">=</span> <span class="tok-num">100</span>, <span class="tok-key">Fov</span> <span class="tok-op">=</span> <span class="tok-num">100</span> },
+    <span class="tok-key">TriggerBot</span> <span class="tok-op">=</span> { <span class="tok-key">Enabled</span> <span class="tok-op">=</span> <span class="tok-kw">true</span>, <span class="tok-key">TriggerKey</span> <span class="tok-op">=</span> Enum.KeyCode.E },
+    <span class="tok-key">Camlock</span> <span class="tok-op">=</span> { <span class="tok-key">Enabled</span> <span class="tok-op">=</span> <span class="tok-kw">false</span>, <span class="tok-key">Smoothness</span> <span class="tok-op">=</span> <span class="tok-num">0.1</span> },
   },
-  Core = {
-    WalkSpeed = { Enabled = false, Speed = 16 },
-    JumpPower = { Enabled = false, Power = 50 },
-  },
-  Visuals = {
-    Enabled = true,
-    Boxes = { Enabled = true },
-    Names = { Enabled = true },
+  <span class="tok-key">Core</span> <span class="tok-op">=</span> {
+    <span class="tok-key">WalkSpeed</span> <span class="tok-op">=</span> { <span class="tok-key">Enabled</span> <span class="tok-op">=</span> <span class="tok-kw">false</span>, <span class="tok-key">Speed</span> <span class="tok-op">=</span> <span class="tok-num">16</span> },
+    <span class="tok-key">JumpPower</span> <span class="tok-op">=</span> { <span class="tok-key">Enabled</span> <span class="tok-op">=</span> <span class="tok-kw">false</span>, <span class="tok-key">Power</span> <span class="tok-op">=</span> <span class="tok-num">50</span> },
   }
 }</code></pre>
         </div>
@@ -127,11 +97,12 @@ getgenv().evensora = {
 
       <section id="faq" class="section">
         <p class="eyebrow">FAQ</p>
-        <h2>Questions fréquentes</h2>
+        <h2>Common questions</h2>
         <div class="faq">
-          <details class="panel"><summary>Comment lancer le site ?</summary><p>Ouvre <code>index.html</code> ou lance <code>python3 -m http.server 8000</code>.</p></details>
-          <details class="panel"><summary>Le site est responsive ?</summary><p>Oui, la grille et les sections s’adaptent mobile/tablette/desktop.</p></details>
-          <details class="panel"><summary>Je peux changer l’image/logo ?</summary><p>Oui, remplace le bloc visuel du hero par ton image préférée.</p></details>
+          <details class="panel"><summary>What is Evensora and where do I get updates?</summary><p>Evensora is a paid product and updates/support are provided through the official Discord server.</p></details>
+          <details class="panel"><summary>How do I get a key?</summary><p>Join the community group, open a ticket with proof, then follow the team instructions to receive access.</p></details>
+          <details class="panel"><summary>How do HWID resets work?</summary><p>Resets are handled by support requests and can take time depending on queue and validation.</p></details>
+          <details class="panel"><summary>Any rules I should know?</summary><p>Do not share keys. By using the product, you agree to the terms listed in the official Discord.</p></details>
         </div>
       </section>
     </main>

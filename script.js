@@ -7,13 +7,13 @@ function fitCanvas() {
   canvas.height = window.innerHeight;
 }
 
-function createStars(count = 140) {
+function createStars(count = 170) {
   stars.length = 0;
   for (let i = 0; i < count; i += 1) {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.5 + 0.2,
+      r: Math.random() * 1.7 + 0.2,
       alpha: Math.random(),
       speed: Math.random() * 0.012 + 0.003,
     });
@@ -40,4 +40,12 @@ drawStars();
 window.addEventListener('resize', () => {
   fitCanvas();
   createStars();
+});
+
+const logo = document.querySelector('.logo-e');
+window.addEventListener('mousemove', (event) => {
+  if (!logo) return;
+  const x = (event.clientX / window.innerWidth - 0.5) * 10;
+  const y = (event.clientY / window.innerHeight - 0.5) * -10;
+  logo.style.transform = `translate(${x}px, ${y}px)`;
 });
