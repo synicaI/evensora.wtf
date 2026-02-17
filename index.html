@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>evensora.lol</title>
+    <meta name="description" content="evensora.lol — script overview, full config preview, pricing and FAQ." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="gloom-fog" aria-hidden="true">
+      <span class="fog fog-a"></span>
+      <span class="fog fog-b"></span>
+      <span class="fog fog-c"></span>
+    </div>
+
+    <div id="introOverlay" class="intro-overlay" aria-hidden="true">
+      <div class="intro-card">
+        <div class="intro-logo">e</div>
+        <h1>evensora.lol</h1>
+        <p>Loading interface…</p>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#intro">evensora.lol</a>
+      <nav>
+        <a href="#hub">Hub</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="hero section">
+        <div class="hero-text">
+          <p class="eyebrow">EVENSORA.LOL</p>
+          <h2>Evensora script overview</h2>
+          <p class="lead">Professional product overview for the complete Evensora configuration experience: setup structure, categorized modules, interface behavior, and transparent documentation in one place.</p>
+          <div class="hero-actions">
+            <a href="#pricing" class="btn primary">Get Lifetime Key</a>
+            <a href="#faq" class="btn ghost">Read Full FAQ</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Neon logo visual">
+          <div class="logo-wrap"><div class="logo-e">e</div></div>
+        </div>
+      </section>
+
+      <section id="hub" class="section">
+        <p class="eyebrow">HUB</p>
+        <h2>One clean control hub</h2>
+        <article class="panel hub-panel">
+          <h3>Evensora Control Hub</h3>
+          <p>Minimal and clean layout for key status, quick settings, script categories, and update notices in one place.</p>
+          <ul>
+            <li>Quick setup onboarding</li>
+            <li>Single dashboard workflow</li>
+            <li>Readable category navigation</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="pricing" class="section">
+        <p class="eyebrow">PRICING</p>
+        <h2>Simple pricing</h2>
+        <div class="pricing-single">
+          <article class="panel plan featured">
+            <h3>Lifetime Key</h3>
+            <p class="price">$5 <span>lifetime</span></p>
+            <ul>
+              <li>Permanent access</li>
+              <li>Discord updates and support</li>
+              <li>Full config visibility in dashboard</li>
+            </ul>
+            <button class="btn primary" type="button">Buy Lifetime</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section code-section" aria-label="Fake Luau editor">
+        <p class="eyebrow">EDITOR</p>
+        <h2>Full script preview (scrollable)</h2>
+        <div class="editor">
+          <div class="editor-bar"><span></span><span></span><span></span><strong>main.luau</strong></div>
+          <pre><code><span class="tok-com">--[[
+    Evensora is a voidfall closet cheat made by Evensora Development Team it is paid to use yet requires you to join our discord server to get updates and support.
+    Hwid resets are done every 7 days so you will need to get a new key every week, we do provide Hwid resets in our discord server for free but requests can take up to 24 hours to process and needs a valid reason.
+    Please note that sharing keys is against our terms of service and will result in a ban from our group and discord server.
+    By using Evensora you agree to our terms of service which can be found in our discord server.
+    Thank you for using Evensora!
+
+    Below are the default settings for Evensora, you can modify these settings to your liking.
+
+    Every feature will be explained in our discord server and below this comment.
+
+    Vital is where you put your key and set your fps cap and unload key and universal mode.
+    Heading is where you can find all the aiming related features.
+    Silent Aim is an aimbot that works by modifying the bullet's trajectory to hit the target with a hit chance percentage and other settings.
+    Trigger Bot automatically shoots when your crosshair is over an enemy
+    Camlock is an aimbot that smoothly locks onto a target when activated with a keybind and other settings like prediction, fov, smoothness and jitter.
+    Core is where you can find all the movement and gun related features.
+    WalkSpeed modifies your player's walking speed.
+    JumpPower modifies your player's jump power.
+    NoRecoil removes the recoil from guns.
+    NoSpread removes the bullet spread from guns.
+    Safety is where you can find all the anti-detection features.
+    AntiKick prevents the server from kicking you for using cheats.
+    WhitelistedPlayers is a list of players that will not be targeted by the cheat.
+    AntiCurve prevents bullets from curving to avoid detection.
+    Inventory is where you can set your weapon loadout.
+    Slots is a list of weapons that will be equipped in the corresponding inventory slots.
+    Visuals is where you can find all the ESP related features, snaplines, boxes, names, health bars and distance.
+    Boxes draws a box around players.
+    Names displays the player's name above their head.
+    HealthBars displays a health bar above the player's head.
+    Snaplines draws a line from your character to other players.
+    Distance displays the distance to other players.
+
+
+    Enjoy Evensora!
+
+    Please note that using cheats can result in a ban from the game you are playing, use at your own risk
+
+    This script is still in development and may contain bugs or incomplete features.
+
+
+
+
+    -- Evensora Development Team
+]]</span>
+
+<span class="tok-fn">getgenv</span>()<span class="tok-op">.</span>evensora <span class="tok-op">=</span> {
+    [<span class="tok-str">"Vital"</span>] <span class="tok-op">=</span> {
+        Key <span class="tok-op">=</span> <span class="tok-str">"your key here"</span>,
+        FpsCap <span class="tok-op">=</span> <span class="tok-num">160</span>,
+        UnloadKey <span class="tok-op">=</span> Enum.KeyCode.End,
+        UnvisersalMode <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+    },
+    [<span class="tok-str">"Heading"</span>] <span class="tok-op">=</span> {
+        [<span class="tok-str">"SilentAim"</span>] <span class="tok-op">=</span> {
+            HitChance <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            CheckIfLethal <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Closest"</span>,
+            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
+            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            AimKey <span class="tok-op">=</span> Enum.KeyCode.Q,
+        },
+        [<span class="tok-str">"TriggerBot"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
+            Delay <span class="tok-op">=</span> <span class="tok-num">0</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TriggerKey <span class="tok-op">=</span> Enum.KeyCode.E,
+        },
+        [<span class="tok-str">"Camlock"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
+            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
+            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            Smoothness <span class="tok-op">=</span> <span class="tok-num">0.1</span>,
+            Jitter <span class="tok-op">=</span> <span class="tok-num">0</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        },
+    },
+    [<span class="tok-str">"Core"</span>] <span class="tok-op">=</span> {
+        WalkSpeed <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Speed <span class="tok-op">=</span> <span class="tok-num">16</span>,
+        },
+        JumpPower <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Power <span class="tok-op">=</span> <span class="tok-num">50</span>,
+        },
+        NoRecoil <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        NoSpread <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+    },
+    [<span class="tok-str">"Safety"</span>] <span class="tok-op">=</span> {
+        AntiKick <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+        WhitelistedPlayers <span class="tok-op">=</span> {
+            <span class="tok-str">"Player1"</span>,
+            <span class="tok-str">"Player2"</span>,
+        },
+        AntiCurve <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+    },
+    [<span class="tok-str">"Inventory"</span>] <span class="tok-op">=</span> {
+        Slots <span class="tok-op">=</span> {
+            [<span class="tok-num">1</span>] <span class="tok-op">=</span> <span class="tok-str">"Double Barrel"</span>,
+            [<span class="tok-num">2</span>] <span class="tok-op">=</span> <span class="tok-str">"Revolver"</span>,
+            [<span class="tok-num">3</span>] <span class="tok-op">=</span> <span class="tok-str">"SMG"</span>,
+            [<span class="tok-num">4</span>] <span class="tok-op">=</span> <span class="tok-str">"Tactical Shotgun"</span>,
+            [<span class="tok-num">5</span>] <span class="tok-op">=</span> <span class="tok-str">"Shotgun"</span>,
+            [<span class="tok-num">6</span>] <span class="tok-op">=</span> <span class="tok-str">"Assault Rifle"</span>,
+            [<span class="tok-num">7</span>] <span class="tok-op">=</span> <span class="tok-str">"Sniper Rifle"</span>,
+            [<span class="tok-num">8</span>] <span class="tok-op">=</span> <span class="tok-str">"Rocket Launcher"</span>,
+            [<span class="tok-num">9</span>] <span class="tok-op">=</span> <span class="tok-str">"Pistol"</span>,
+        },
+    },
+    [<span class="tok-str">"Visuals"</span>] <span class="tok-op">=</span> {
+        Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        [<span class="tok-str">"Boxes"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">0</span>, <span class="tok-num">0</span>),
+        },
+        [<span class="tok-str">"Names"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">255</span>),
+        },
+        [<span class="tok-str">"HealthBars"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        },
+        [<span class="tok-str">"Snaplines"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">0</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
+        },
+        [<span class="tok-str">"Distance"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
+        },
+    },
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <p class="eyebrow">FAQ</p>
+        <h2>Feature breakdown</h2>
+        <div class="faq">
+          <details class="panel"><summary>What is Evensora?</summary><p>Evensora is presented as a paid configuration product with a central control panel, one lifetime plan, and categorized script modules for easier setup and reading.</p></details>
+          <details class="panel"><summary>Vital (Key, FPS cap, unload key, universal mode)</summary><p>Vital contains essential runtime settings: key field, frame cap behavior, emergency unload key, and global mode toggle.</p></details>
+          <details class="panel"><summary>Heading: SilentAim, TriggerBot, Camlock</summary><p>This category groups aim-related options, including hit chance, target part logic, keybind activation, prediction, FOV visibility, and smoothing behavior.</p></details>
+          <details class="panel"><summary>Core: WalkSpeed, JumpPower, NoRecoil, NoSpread</summary><p>Core covers movement and gun response values. It combines boolean toggles with numeric values for speed and jump behavior.</p></details>
+          <details class="panel"><summary>Safety: AntiKick, WhitelistedPlayers, AntiCurve</summary><p>Safety focuses on protection controls and allowlists. WhitelistedPlayers prevents listed users from being included in targeting flows.</p></details>
+          <details class="panel"><summary>Inventory: Slots mapping</summary><p>Inventory assigns weapon names to slots 1-9 to keep a consistent layout and predictable order in the loadout.</p></details>
+          <details class="panel"><summary>Visuals: Boxes, Names, HealthBars, Snaplines, Distance</summary><p>Visuals combines overlay toggles, color fields, and team-check flags for display modules like boxes, names, bars, lines, and distance labels.</p></details>
+          <details class="panel"><summary>How do HWID resets work?</summary><p>HWID resets follow a periodic schedule (typically weekly), and requests may require a valid reason plus support validation before processing.</p></details>
+          <details class="panel"><summary>How long can HWID reset requests take?</summary><p>Processing time can vary by queue load; requests may take up to 24 hours depending on support capacity and request quality.</p></details>
+          <details class="panel"><summary>Can keys be shared?</summary><p>No. Sharing keys is against policy and may result in access removal from related services.</p></details>
+          <details class="panel"><summary>Terms and risk notice</summary><p>Using these configurations is at your own risk. Access and usage are expected to follow platform rules and product terms.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
