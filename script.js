@@ -7,15 +7,15 @@ function fitCanvas() {
   canvas.height = window.innerHeight;
 }
 
-function createStars(count = 90) {
+function createStars(count = 140) {
   stars.length = 0;
   for (let i = 0; i < count; i += 1) {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 1.7 + 0.2,
+      r: Math.random() * 1.5 + 0.2,
       alpha: Math.random(),
-      speed: Math.random() * 0.2 + 0.03,
+      speed: Math.random() * 0.012 + 0.003,
     });
   }
 }
@@ -28,7 +28,7 @@ function drawStars() {
 
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255,255,255,${Math.abs(s.alpha)})`;
+    ctx.fillStyle = `rgba(180,235,255,${Math.abs(s.alpha)})`;
     ctx.fill();
   }
   requestAnimationFrame(drawStars);
@@ -40,17 +40,4 @@ drawStars();
 window.addEventListener('resize', () => {
   fitCanvas();
   createStars();
-});
-
-const ambient = document.getElementById('ambient');
-const musicToggle = document.getElementById('musicToggle');
-
-musicToggle.addEventListener('click', async () => {
-  if (ambient.paused) {
-    await ambient.play();
-    musicToggle.textContent = '♫ Ambience: ON';
-  } else {
-    ambient.pause();
-    musicToggle.textContent = '♫ Ambience: OFF';
-  }
 });

@@ -3,52 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>evensora — landing</title>
-    <meta
-      name="description"
-      content="Landing page style bio-link inspirée de juju.lol avec animations et cartes sociales."
-    />
+    <title>evensora.wtf</title>
+    <meta name="description" content="evensora.wtf — hubs, pricing, FAQ, et présentation visuelle." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <canvas id="stars" aria-hidden="true"></canvas>
 
-    <main class="card" role="main">
-      <div class="status">● Online</div>
-      <img
-        class="avatar"
-        src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=300&q=80"
-        alt="Photo de profil"
-      />
-      <h1>@evensora</h1>
-      <p class="subtitle">creative dev • design addict • night coder</p>
-
-      <div class="badges" aria-label="Centres d'intérêt">
-        <span>UI/UX</span>
-        <span>Motion</span>
-        <span>Web</span>
-      </div>
-
-      <nav class="links" aria-label="Liens sociaux">
-        <a href="#" target="_blank" rel="noreferrer">Discord</a>
-        <a href="#" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="#" target="_blank" rel="noreferrer">TikTok</a>
-        <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+    <header class="topbar">
+      <a class="brand" href="#intro">evensora.wtf</a>
+      <nav>
+        <a href="#hubs">Hubs</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
       </nav>
+    </header>
 
-      <button id="musicToggle" class="music" type="button">♫ Ambience: OFF</button>
-      <audio id="ambient" loop preload="none">
-        <source
-          src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_1a43f6f07f.mp3?filename=dreamscape-110624.mp3"
-          type="audio/mpeg"
-        />
-      </audio>
+    <main>
+      <section id="intro" class="hero section">
+        <div class="hero-text">
+          <p class="eyebrow">INTRO</p>
+          <h1>evensora.wtf</h1>
+          <p class="lead">Un site pleine largeur, style neon/glass, avec sections hubs, pricing, FAQ et un faux éditeur de code Luau.</p>
+          <div class="hero-actions">
+            <a href="#hubs" class="btn primary">Voir les hubs</a>
+            <a href="#pricing" class="btn ghost">Comparer les plans</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Visuel logo neon">
+          <div class="logo-wrap">
+            <div class="logo-e">e</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hubs" class="section">
+        <p class="eyebrow">HUBS</p>
+        <h2>Many hubs</h2>
+        <div class="grid hubs">
+          <article class="panel"><h3>Vital Hub</h3><p>Performance presets, workflow rapide, dashboard clean.</p></article>
+          <article class="panel"><h3>Core Hub</h3><p>Réglages généraux, préférences profil, sync multi-devices.</p></article>
+          <article class="panel"><h3>Visual Hub</h3><p>Thèmes, effets, palettes et configuration d’UI avancée.</p></article>
+          <article class="panel"><h3>Safety Hub</h3><p>Logs, permissions, et protections d’accès basiques.</p></article>
+          <article class="panel"><h3>Inventory Hub</h3><p>Slots, templates et organisation rapide des ressources.</p></article>
+          <article class="panel"><h3>Community Hub</h3><p>Notes partagées, changelogs et roadmap publique.</p></article>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <p class="eyebrow">PRICING</p>
+        <h2>Choisis ton plan</h2>
+        <div class="grid pricing">
+          <article class="panel plan">
+            <h3>Starter</h3>
+            <p class="price">0€<span>/mo</span></p>
+            <ul>
+              <li>1 workspace</li>
+              <li>Theme de base</li>
+              <li>Support community</li>
+            </ul>
+            <button class="btn primary" type="button">Commencer</button>
+          </article>
+          <article class="panel plan featured">
+            <h3>Pro</h3>
+            <p class="price">12€<span>/mo</span></p>
+            <ul>
+              <li>Hubs complets</li>
+              <li>Animations premium</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="btn primary" type="button">Choisir Pro</button>
+          </article>
+          <article class="panel plan">
+            <h3>Team</h3>
+            <p class="price">29€<span>/mo</span></p>
+            <ul>
+              <li>Jusqu’à 10 membres</li>
+              <li>Admin console</li>
+              <li>Integrations avancées</li>
+            </ul>
+            <button class="btn primary" type="button">Contacter</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section code-section" aria-label="Faux éditeur Luau">
+        <p class="eyebrow">CODE</p>
+        <h2>Fake Luau Editor</h2>
+        <div class="editor">
+          <div class="editor-bar">
+            <span></span><span></span><span></span>
+            <strong>main.luau</strong>
+          </div>
+          <pre><code>-- Faux exemple visuel (non-opérationnel)
+getgenv().evensora = {
+  Vital = {
+    Key = "your key here",
+    FpsCap = 160,
+    UnloadKey = Enum.KeyCode.End,
+  },
+  Heading = {
+    SilentAim = {
+      Enabled = false,
+      AimPart = "Closest",
+      Fov = 100,
+    },
+  },
+  Core = {
+    WalkSpeed = { Enabled = false, Speed = 16 },
+    JumpPower = { Enabled = false, Power = 50 },
+  },
+  Visuals = {
+    Enabled = true,
+    Boxes = { Enabled = true },
+    Names = { Enabled = true },
+  }
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions fréquentes</h2>
+        <div class="faq">
+          <details class="panel"><summary>Comment lancer le site ?</summary><p>Ouvre <code>index.html</code> ou lance <code>python3 -m http.server 8000</code>.</p></details>
+          <details class="panel"><summary>Le site est responsive ?</summary><p>Oui, la grille et les sections s’adaptent mobile/tablette/desktop.</p></details>
+          <details class="panel"><summary>Je peux changer l’image/logo ?</summary><p>Oui, remplace le bloc visuel du hero par ton image préférée.</p></details>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
