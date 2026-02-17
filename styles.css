@@ -177,6 +177,16 @@ pre {
 details summary { cursor: pointer; font-weight: 600; }
 details p { margin-bottom: 0; }
 
+.doc-block h3 {
+  margin: 1.1rem 0 0.45rem;
+  font-size: 1.02rem;
+}
+.doc-block h3:first-child { margin-top: 0; }
+.doc-block p { margin: 0 0 0.7rem; }
+.doc-block ul { margin: 0 0 0.9rem; padding-left: 1.15rem; }
+.doc-block li { margin-bottom: 0.25rem; }
+
+
 @keyframes drift {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
   50% { transform: translate3d(2vw, -2vh, 0) scale(1.08); }
