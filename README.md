@@ -1,10 +1,10 @@
-# evensora.wtf
+# evensora.lol
 
 Landing page statique (HTML/CSS/JS), inspirée de juju.lol.
 
 ## Lancer le projet
 
-> ⚠️ N'utilise pas un chemin fixe comme `/workspace/evensora.wtf` sur Windows.
+> ⚠️ N'utilise pas un chemin fixe comme `/workspace/evensora.lol` sur Windows.
 > Va dans **le dossier réel où tu as cloné/téléchargé le projet**.
 
 ### Option A — Ouvrir directement
@@ -16,14 +16,14 @@ Double-clique sur `index.html`.
 #### Windows (PowerShell)
 
 ```powershell
-cd "C:\chemin\vers\evensora.wtf"
+cd "C:\chemin\vers\evensora.lol"
 py -m http.server 8000
 ```
 
 #### macOS / Linux
 
 ```bash
-cd /chemin/vers/evensora.wtf
+cd /chemin/vers/evensora.lol
 python3 -m http.server 8000
 ```
 
@@ -45,7 +45,7 @@ Cela veut dire que le dossier passé à `cd` n’existe pas sur ta machine.
 Exemple Windows:
 
 ```powershell
-cd "C:\Users\TonNom\Desktop\evensora.wtf"
+cd "C:\Users\TonNom\Desktop\evensora.lol"
 ```
 
 ## Structure
