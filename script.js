@@ -43,7 +43,11 @@ window.addEventListener('resize', () => {
 });
 
 const logo = document.querySelector('.logo-e');
+const root = document.documentElement;
 window.addEventListener('mousemove', (event) => {
+  root.style.setProperty('--mx', `${event.clientX}px`);
+  root.style.setProperty('--my', `${event.clientY}px`);
+
   if (!logo) return;
   const x = (event.clientX / window.innerWidth - 0.5) * 10;
   const y = (event.clientY / window.innerHeight - 0.5) * -10;
