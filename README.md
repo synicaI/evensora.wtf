@@ -27,10 +27,17 @@ cd /chemin/vers/evensora.lol
 python3 -m http.server 8000
 ```
 
+### Option C — Serveur local Node.js
+
+```bash
+npm install
+npm run start
+```
+
 Puis ouvre:
 
-- <http://localhost:8000>
-- ou <http://127.0.0.1:8000/index.html>
+- <http://localhost:8000> (Python)
+- ou <http://localhost:3000> (Node)
 
 ## Dépannage
 
@@ -53,3 +60,39 @@ cd "C:\Users\TonNom\Desktop\evensora.lol"
 - `index.html` — structure de la page
 - `styles.css` — styles et responsive
 - `script.js` — animation des étoiles + toggle audio
+- `package.json` — script de démarrage Node (utile pour Railway)
+
+## Hébergement (alternative simple si Vercel te bloque)
+
+### Option 1 — Railway (recommandé si tu veux éviter Vercel)
+
+1. Push le repo sur GitHub.
+2. Va sur Railway → **New Project** → **Deploy from GitHub repo**.
+3. Sélectionne ce repo.
+4. Railway détecte `package.json` et lance `npm start` automatiquement.
+5. Quand c'est déployé, récupère l'URL `*.up.railway.app`.
+6. Dans Railway, ajoute ton domaine custom: `evensora.lol` (+ `www.evensora.lol` si voulu).
+
+### Option 2 — Netlify (ultra simple)
+
+1. Va sur Netlify → **Add new site** → **Deploy manually**.
+2. Glisse-dépose le dossier du projet (ou connecte GitHub).
+3. Ajoute ensuite `evensora.lol` dans **Domain management**.
+
+## Configurer le DNS avec ton IP
+
+Chez ton registrar DNS, ajoute ces enregistrements:
+
+- **A**
+  - **Host**: `@`
+  - **Value**: `216.198.79.1`
+- **CNAME**
+  - **Host**: `www`
+  - **Value**: `evensora.lol`
+
+## Vérifier
+
+Après propagation DNS, teste:
+
+- <https://evensora.lol>
+- <https://www.evensora.lol>
