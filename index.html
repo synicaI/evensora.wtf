@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>okbye.lol</title>
+    <meta name="description" content="okbye.lol — script overview, full config preview, pricing and FAQ." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="gloom-fog" aria-hidden="true">
+      <span class="fog fog-a"></span>
+      <span class="fog fog-b"></span>
+      <span class="fog fog-c"></span>
+    </div>
+
+    <div id="introOverlay" class="intro-overlay" aria-hidden="true">
+      <div class="intro-card">
+        <img class="intro-logo" src="assets/okbye-logo.svg" alt="okbye.lol logo" />
+        <h1>okbye.lol</h1>
+        <p>Loading interface…</p>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#intro">okbye.lol</a>
+      <nav>
+        <a href="#pricing">Pricing</a>
+        <a href="#supported">Support Matrix</a>
+        <a href="#features">Feature Docs</a>
+        <a href="#devlog">Dev Log</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="hero section">
+        <div class="hero-text">
+          <p class="eyebrow">OKBYE.LOL</p>
+          <h2>Quit Losing. Start Winning. Buy okbye.lol.</h2>
+          <p class="lead">okbye.lol is a paid script for Roblox, documented in a structured way with module-by-module controls, key flow guidance, and a full script reference for experienced users.</p>
+          <div class="hero-actions">
+            <a href="#pricing" class="btn primary">Get Lifetime Key</a>
+            <a href="#faq" class="btn ghost">Read Full FAQ</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Neon logo visual">
+          <div class="logo-wrap"><img class="logo-mark" src="assets/okbye-logo.svg" alt="okbye.lol logo" /></div>
+        </div>
+      </section>
+
+
+      <section id="pricing" class="section">
+        <p class="eyebrow">PRICING</p>
+        <h2>Simple pricing</h2>
+        <div class="pricing-single">
+          <article class="panel plan featured">
+            <h3>Lifetime Key</h3>
+            <p class="price">$5 <span>lifetime</span></p>
+            <a class="btn primary" href="https://universalutilities.mysellauth.com/product/melodrama-life-time-key" target="_blank" rel="noopener noreferrer">Buy Lifetime</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section code-section" aria-label="Fake Luau editor">
+        <p class="eyebrow">EDITOR</p>
+        <h2>Full script preview (scrollable)</h2>
+        <div class="editor">
+          <div class="editor-bar"><span></span><span></span><span></span><strong>main.luau</strong></div>
+          <pre><code><span class="tok-com">--[[
+    okbye.lol is a voidfall closet cheat made by okbye.lol Development Team it is paid to use yet requires you to join our discord server to get updates and support.
+    Hwid resets are done every 7 days so you will need to get a new key every week, we do provide Hwid resets in our discord server for free but requests can take up to 24 hours to process and needs a valid reason.
+    Please note that sharing keys is against our terms of service and will result in a ban from our group and discord server.
+    By using okbye.lol you agree to our terms of service which can be found in our discord server.
+    Thank you for using okbye.lol!
+
+    Below are the default settings for okbye.lol, you can modify these settings to your liking.
+
+    Every feature will be explained in our discord server and below this comment.
+
+    Vital is where you put your key and set your fps cap and unload key and universal mode.
+    Heading is where you can find all the aiming related features.
+    Silent Aim is an aimbot that works by modifying the bullet's trajectory to hit the target with a hit chance percentage and other settings.
+    Trigger Bot automatically shoots when your crosshair is over an enemy
+    Camlock is an aimbot that smoothly locks onto a target when activated with a keybind and other settings like prediction, fov, smoothness and jitter.
+    Core is where you can find all the movement and gun related features.
+    WalkSpeed modifies your player's walking speed.
+    JumpPower modifies your player's jump power.
+    NoRecoil removes the recoil from guns.
+    NoSpread removes the bullet spread from guns.
+    Safety is where you can find all the anti-detection features.
+    AntiKick prevents the server from kicking you for using cheats.
+    WhitelistedPlayers is a list of players that will not be targeted by the cheat.
+    AntiCurve prevents bullets from curving to avoid detection.
+    Inventory is where you can set your weapon loadout.
+    Slots is a list of weapons that will be equipped in the corresponding inventory slots.
+    Visuals is where you can find all the ESP related features, snaplines, boxes, names, health bars and distance.
+    Boxes draws a box around players.
+    Names displays the player's name above their head.
+    HealthBars displays a health bar above the player's head.
+    Snaplines draws a line from your character to other players.
+    Distance displays the distance to other players.
+
+
+    Enjoy okbye.lol!
+
+    Please note that using cheats can result in a ban from the game you are playing, use at your own risk
+
+    This script is still in development and may contain bugs or incomplete features.
+
+
+
+
+    -- okbye.lol Development Team
+]]</span>
+
+<span class="tok-fn">getgenv</span>()<span class="tok-op">.</span>okbye_lol <span class="tok-op">=</span> {
+    [<span class="tok-str">"Vital"</span>] <span class="tok-op">=</span> {
+        Key <span class="tok-op">=</span> <span class="tok-str">"your key here"</span>,
+        FpsCap <span class="tok-op">=</span> <span class="tok-num">160</span>,
+        UnloadKey <span class="tok-op">=</span> Enum.KeyCode.End,
+        UnvisersalMode <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+    },
+    [<span class="tok-str">"Heading"</span>] <span class="tok-op">=</span> {
+        [<span class="tok-str">"SilentAim"</span>] <span class="tok-op">=</span> {
+            HitChance <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            CheckIfLethal <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Closest"</span>,
+            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
+            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            AimKey <span class="tok-op">=</span> Enum.KeyCode.Q,
+        },
+        [<span class="tok-str">"TriggerBot"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
+            Delay <span class="tok-op">=</span> <span class="tok-num">0</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TriggerKey <span class="tok-op">=</span> Enum.KeyCode.E,
+        },
+        [<span class="tok-str">"Camlock"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
+            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
+            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
+            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            Smoothness <span class="tok-op">=</span> <span class="tok-num">0.1</span>,
+            Jitter <span class="tok-op">=</span> <span class="tok-num">0</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        },
+    },
+    [<span class="tok-str">"Core"</span>] <span class="tok-op">=</span> {
+        WalkSpeed <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Speed <span class="tok-op">=</span> <span class="tok-num">16</span>,
+        },
+        JumpPower <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Power <span class="tok-op">=</span> <span class="tok-num">50</span>,
+        },
+        NoRecoil <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        NoSpread <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+    },
+    [<span class="tok-str">"Safety"</span>] <span class="tok-op">=</span> {
+        AntiKick <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+        WhitelistedPlayers <span class="tok-op">=</span> {
+            <span class="tok-str">"Player1"</span>,
+            <span class="tok-str">"Player2"</span>,
+        },
+        AntiCurve <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+    },
+    [<span class="tok-str">"Inventory"</span>] <span class="tok-op">=</span> {
+        Slots <span class="tok-op">=</span> {
+            [<span class="tok-num">1</span>] <span class="tok-op">=</span> <span class="tok-str">"Double Barrel"</span>,
+            [<span class="tok-num">2</span>] <span class="tok-op">=</span> <span class="tok-str">"Revolver"</span>,
+            [<span class="tok-num">3</span>] <span class="tok-op">=</span> <span class="tok-str">"SMG"</span>,
+            [<span class="tok-num">4</span>] <span class="tok-op">=</span> <span class="tok-str">"Tactical Shotgun"</span>,
+            [<span class="tok-num">5</span>] <span class="tok-op">=</span> <span class="tok-str">"Shotgun"</span>,
+            [<span class="tok-num">6</span>] <span class="tok-op">=</span> <span class="tok-str">"Assault Rifle"</span>,
+            [<span class="tok-num">7</span>] <span class="tok-op">=</span> <span class="tok-str">"Sniper Rifle"</span>,
+            [<span class="tok-num">8</span>] <span class="tok-op">=</span> <span class="tok-str">"Rocket Launcher"</span>,
+            [<span class="tok-num">9</span>] <span class="tok-op">=</span> <span class="tok-str">"Pistol"</span>,
+        },
+    },
+    [<span class="tok-str">"Visuals"</span>] <span class="tok-op">=</span> {
+        Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        [<span class="tok-str">"Boxes"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">0</span>, <span class="tok-num">0</span>),
+        },
+        [<span class="tok-str">"Names"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">255</span>),
+        },
+        [<span class="tok-str">"HealthBars"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+        },
+        [<span class="tok-str">"Snaplines"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">0</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
+        },
+        [<span class="tok-str">"Distance"</span>] <span class="tok-op">=</span> {
+            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
+            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
+        },
+    },
+}</code></pre>
+        </div>
+      </section>
+
+
+      <section id="supported" class="section">
+        <p class="eyebrow">SUPPORT MATRIX</p>
+        <h2>Supported games and executors (V2)</h2>
+        <div class="faq">
+          <article class="panel">
+            <h3>Supported games for V2</h3>
+            <p>Da Hood, every Voidfall game, Das Hood, Dea Hood, Dee Hood, Zee Hood, Da Track, Da Bot Aim Trainer, and Duh Hood.</p>
+            <p>If your game is not listed above, switch <strong>Universal Mode</strong> to <strong>true</strong>.</p>
+            <p>If your game is not listed and you want support added, open a ticket. Please note that not every game can be listed or supported.</p>
+          </article>
+          <article class="panel">
+            <h3>Supported executors for V2</h3>
+            <p><strong>Free executors:</strong> Xeno (unstable), Velocity.</p>
+            <p>Every other paid executor is supported. For more details, check <a href="https://whatexpsare.online/" target="_blank" rel="noopener noreferrer">whatexpsare.online</a>.</p>
+            <p>If your executor does not support HTTP requests, you will not be able to use okbye.lol.</p>
+            <p>For any question, open a ticket in the support channel.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="features" class="section">
+        <p class="eyebrow">FEATURE DOCUMENTATION</p>
+        <h2>OKBYE.LOL script documentation</h2>
+        <article class="panel doc-block">
+          <h3>VITAL: Control Center</h3>
+          <p>The core mechanics that keep the script running and secure.</p>
+          <ul>
+            <li><strong>Key System:</strong> Your personal license to access the cheat.</li>
+            <li><strong>FPS Cap:</strong> Limits your frames per second (set to 0 for uncapped).</li>
+            <li><strong>Unload Key:</strong> The emergency exit (default: End) to stop the script instantly.</li>
+            <li><strong>Universal Mode:</strong> Toggle to attempt usage in games other than Voidfall.</li>
+          </ul>
+
+          <h3>HEADING: Combat &amp; Aiming</h3>
+          <p>The tools used to enhance accuracy and reaction time.</p>
+          <p><strong>Silent Aim:</strong> Modifies bullet paths to hit targets without moving your camera. Hit chance controls consistency, prediction accounts for movement, FOV circle limits target area, and visible check avoids wall targets.</p>
+          <p><strong>Trigger Bot:</strong> Automatically fires when an enemy crosses your reticle. Delay can be used to mimic human reaction speed.</p>
+          <p><strong>Camlock:</strong> Locks camera movement onto a target. Smoothness reduces snapping, while jitter adds small hand-like variance.</p>
+
+          <h3>CORE: Movement &amp; Gun Mechanics</h3>
+          <p>Physical modifications to character and weapon behavior.</p>
+          <ul>
+            <li><strong>WalkSpeed:</strong> Increases movement speed.</li>
+            <li><strong>JumpPower:</strong> Increases jump height.</li>
+            <li><strong>NoRecoil:</strong> Removes the upward kick of guns when firing.</li>
+            <li><strong>NoSpread:</strong> Forces bullets to travel in a straight line.</li>
+          </ul>
+
+          <h3>SAFETY: Stealth &amp; Protection</h3>
+          <p>Features intended to reduce detection risk and preserve access.</p>
+          <ul>
+            <li><strong>Anti-Kick:</strong> Attempts to bypass automatic kick systems.</li>
+            <li><strong>Whitelist:</strong> Prevents listed players from being targeted.</li>
+            <li><strong>Anti-Curve:</strong> Reduces visible bullet bending patterns.</li>
+          </ul>
+
+          <h3>VISUALS: ESP</h3>
+          <p>Overlay information to track enemy position and status.</p>
+          <ul>
+            <li><strong>Boxes:</strong> Draws frames around players.</li>
+            <li><strong>Names:</strong> Displays usernames.</li>
+            <li><strong>Health Bars:</strong> Shows remaining health.</li>
+            <li><strong>Snaplines:</strong> Draws lines from your position to enemies.</li>
+            <li><strong>Distance:</strong> Displays range in studs.</li>
+          </ul>
+
+          <h3>INVENTORY: Loadout Manager</h3>
+          <p><strong>Slots:</strong> Organizes weapons into hotbar positions (1-9) so your layout stays consistent in game.</p>
+        </article>
+      </section>
+
+      <section id="devlog" class="section">
+        <p class="eyebrow">DEV LOG</p>
+        <h2>Recent development updates</h2>
+        <div class="faq">
+          <article class="panel">
+            <h3>v1.3 — Interface polish</h3>
+            <p>Refined the liquid-glass visuals, improved readability, and tuned spacing for cleaner full-resolution viewing.</p>
+          </article>
+          <article class="panel">
+            <h3>v1.2 — Key purchase flow</h3>
+            <p>Added direct lifetime checkout redirect and simplified the pricing card to a single focused offer.</p>
+          </article>
+          <article class="panel">
+            <h3>v1.1 — Script documentation</h3>
+            <p>Expanded the fake Luau editor and FAQ to document all major modules: Vital, Heading, Core, Safety, Inventory, and Visuals.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <p class="eyebrow">FAQ</p>
+        <h2>Access, resets, and support</h2>
+        <div class="faq">
+          <details class="panel"><summary>What is okbye.lol?</summary><p>okbye.lol is a paid script for Roblox, documented in a structured way with module-by-module controls, key flow guidance, and a full script reference for experienced users.</p></details>
+          <details class="panel"><summary>How do HWID resets work?</summary><p>HWID resets are handled on a recurring cycle (typically every 7 days). You may need to submit a valid reason in a ticket before approval.</p></details>
+          <details class="panel"><summary>How long can HWID reset requests take?</summary><p>Request processing can take up to 24 hours depending on queue volume and ticket quality.</p></details>
+          <details class="panel"><summary>Can I use executors without HTTP support?</summary><p>No. If the executor cannot perform HTTP requests, okbye.lol cannot authenticate and load correctly.</p></details>
+          <details class="panel"><summary>Can keys be shared?</summary><p>No. Key sharing is against terms and can result in removal of access.</p></details>
+          <details class="panel"><summary>What if my game is not listed?</summary><p>Enable Universal Mode first. If support is still needed, open a ticket with game details for review.</p></details>
+          <details class="panel"><summary>Where can I ask questions?</summary><p>Open a support ticket for account, access, reset, or compatibility issues.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
