@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
   createStars();
 });
 
-const logo = document.querySelector('.logo-e');
+const logo = document.querySelector('.logo-mark');
 const root = document.documentElement;
 window.addEventListener('mousemove', (event) => {
   root.style.setProperty('--mx', `${event.clientX}px`);

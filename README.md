@@ -79,16 +79,26 @@ cd "C:\Users\TonNom\Desktop\evensora.lol"
 2. Glisse-dépose le dossier du projet (ou connecte GitHub).
 3. Ajoute ensuite `evensora.lol` dans **Domain management**.
 
-## Configurer le DNS avec ton IP
+## Configurer le DNS (Railway)
 
-Chez ton registrar DNS, ajoute ces enregistrements:
+Dans Railway, la fenêtre **Configure DNS Records** te donne les valeurs exactes à copier.
+Pour ton cas actuel:
 
-- **A**
-  - **Host**: `@`
-  - **Value**: `216.198.79.1`
 - **CNAME**
-  - **Host**: `www`
-  - **Value**: `evensora.lol`
+  - **Name**: `@`
+  - **Value**: `tv7igjvo.up.railway.app`
+- **TXT**
+  - **Name**: `_railway-verify`
+  - **Value**: `railway-verify=3b97a6a4c412af5bbb6e33bb53d92bc26647ee37a417dea62c4de8e3521dd036`
+
+> ⚠️ Si ton registrar n'accepte pas `CNAME` sur `@`, utilise la stratégie équivalente proposée par ton DNS provider:
+> `ALIAS/ANAME` sur `@` vers `tv7igjvo.up.railway.app`, puis garde le TXT `_railway-verify`.
+
+Optionnel pour `www`:
+
+- **CNAME**
+  - **Name**: `www`
+  - **Value**: `tv7igjvo.up.railway.app`
 
 ## Vérifier
 
