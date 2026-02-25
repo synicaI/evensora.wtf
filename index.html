@@ -83,50 +83,115 @@
         <div class="editor">
           <div class="editor-bar"><span></span><span></span><span></span><strong>main.luau</strong></div>
           <pre><code><span class="tok-com">--[[
-    okbye.lol is a voidfall closet cheat made by okbye.lol Development Team it is paid to use yet requires you to join our discord server to get updates and support.
-    Hwid resets are done every 7 days so you will need to get a new key every week, we do provide Hwid resets in our discord server for free but requests can take up to 24 hours to process and needs a valid reason.
-    Please note that sharing keys is against our terms of service and will result in a ban from our group and discord server.
-    By using okbye.lol you agree to our terms of service which can be found in our discord server.
-    Thank you for using okbye.lol!
 
-    Below are the default settings for okbye.lol, you can modify these settings to your liking.
+EXEPERIENCE_THE_FEELING_OF_NEVER_LOSING_AGAIN_WITH_OKBYE_LOL = "your key here"
 
-    Every feature will be explained in our discord server and below this comment.
-
-    Vital is where you put your key and set your fps cap and unload key and universal mode.
-    Heading is where you can find all the aiming related features.
-    Silent Aim is an aimbot that works by modifying the bullet's trajectory to hit the target with a hit chance percentage and other settings.
-    Trigger Bot automatically shoots when your crosshair is over an enemy
-    Camlock is an aimbot that smoothly locks onto a target when activated with a keybind and other settings like prediction, fov, smoothness and jitter.
-    Core is where you can find all the movement and gun related features.
-    WalkSpeed modifies your player's walking speed.
-    JumpPower modifies your player's jump power.
-    NoRecoil removes the recoil from guns.
-    NoSpread removes the bullet spread from guns.
-    Safety is where you can find all the anti-detection features.
-    AntiKick prevents the server from kicking you for using cheats.
-    WhitelistedPlayers is a list of players that will not be targeted by the cheat.
-    AntiCurve prevents bullets from curving to avoid detection.
-    Inventory is where you can set your weapon loadout.
-    Slots is a list of weapons that will be equipped in the corresponding inventory slots.
-    Visuals is where you can find all the ESP related features, snaplines, boxes, names, health bars and distance.
-    Boxes draws a box around players.
-    Names displays the player's name above their head.
-    HealthBars displays a health bar above the player's head.
-    Snaplines draws a line from your character to other players.
-    Distance displays the distance to other players.
-
-
-    Enjoy okbye.lol!
-
-    Please note that using cheats can result in a ban from the game you are playing, use at your own risk
-
-    This script is still in development and may contain bugs or incomplete features.
-
-
-
-
-    -- okbye.lol Development Team
+getgenv().NEVERLOSEAGAINWITHOKBYE_LOL = {
+    ["Initiation"] = {
+        ["Intro"] = {
+            ["Enabled"] = true,
+            ["VisualIntro"] = true,
+            ["SoundIntro"] = true,
+            ["Duration"] = 5.0
+        },
+        ["Crucial"] = {
+            ["Debug"] = false,
+            ["Optimisation"] = false,
+            ["Bypass"] = true,
+            ["Notify"] = true,
+            ["LegitMode"] = true,
+            ["Flap"] = {
+                ["Enabled"] = false,
+                ["Keybind"] = Enum.KeyCode.F6
+            }
+        },
+        ["Safety"] = {
+            ["Enabled"] = true,
+            ["No-Ground-Shot"] = true,
+            ["Anti-Curve"] = true,
+            ["Anti-Aimview"] = true
+        },
+        ["Gameplay"] = {
+            ["SilentAim"] = {
+                ["Enabled"] = true,
+                ["TeamCheck"] = true,
+                ["VisibleCheck"] = true,
+                ["HitPart"] = "Head"
+            },
+            ["Aimlock"] = {
+                ["Enabled"] = true,
+                ["TeamCheck"] = true,
+                ["VisibleCheck"] = true,
+                ["Keybind"] = Enum.KeyCode.E,
+                ["FOV"] = 100,
+                ["Smoothness"] = 0.5,
+                ["HitPart"] = "Head"
+            },
+            ["TriggerBot"] = {
+                ["Enabled"] = true,
+                ["Keybind"] = Enum.KeyCode.F,
+                ["FOV"] = 100,
+                ["TeamCheck"] = true,
+                ["VisibleCheck"] = true
+            }
+        },
+        ["Movement"] = {
+            ["SpeedHack"] = {
+                ["Enabled"] = false,
+                ["Value"] = 50,
+                ["Keybind"] = Enum.KeyCode.V
+            },
+            ["InfiniteJump"] = false,
+            ["NoClip"] = false,
+            ["Fly"] = {
+                ["Enabled"] = false,
+                ["Speed"] = 20
+            }
+        },
+        ["Visuals"] = {
+            ["Enabled"] = true,
+            ["ESP"] = true,
+            ["Chams"] = true,
+            ["Box"] = true,
+            ["Healthbar"] = true,
+            ["Name"] = true,
+            ["Distance"] = true,
+            ["TeamCheck"] = true,
+            ["Tracers"] = true,
+            ["FOVCircle"] = true,
+            ["FOVCircleColor"] = Color3.fromRGB(255, 0, 0),
+            ["FOVCircleTransparency"] = 0.5,
+            ["FOVCircleThickness"] = 1,
+            ["FOVCircleFilled"] = false
+        },
+        ["Skins"] = {
+            ["Enabled"] = false,
+            ["Weapons"] = {
+                ["[Double-Barrel SG]"] = "Golden Age",
+                ["[Revolver]"] = "Golden Age",
+                ["[TacticalShotgun]"] = "Shadow",
+                ["[Knife]"] = "Golden Age Tanto"
+            }
+        },
+        ["Headless"] = {
+            ["Enabled"] = false,
+            ["RemoveFaceAccessories"] = true
+        },
+        ["Korblox"] = {
+            ["Enabled"] = false,
+            ["Leg"] = "Right" -- Options: "Right", "Left", or "Both"
+        },
+        ["Miscellaneous"] = {
+            ["FullBright"] = true,
+            ["NoFog"] = true,
+            ["AutoReload"] = false,
+            ["FOVChanger"] = {
+                ["Enabled"] = false,
+                ["Value"] = 120
+            }
+        }
+    }
+}
 ]]</span>
 
 <span class="tok-fn">getgenv</span>()<span class="tok-op">.</span>okbye_lol <span class="tok-op">=</span> {
@@ -309,16 +374,16 @@
         <h2>Recent development updates</h2>
         <div class="faq">
           <article class="panel">
-            <h3>v1.3 — Interface polish</h3>
-            <p>Refined the liquid-glass visuals, improved readability, and tuned spacing for cleaner full-resolution viewing.</p>
+            <h3>v1.3 — Rewrite</h3>
+            <p>Final table released.</p>
           </article>
           <article class="panel">
-            <h3>v1.2 — Key purchase flow</h3>
+            <h3>v1.2 — Purchase Hub</h3>
             <p>Added direct lifetime checkout redirect and simplified the pricing card to a single focused offer.</p>
           </article>
           <article class="panel">
-            <h3>v1.1 — Script documentation</h3>
-            <p>Expanded the fake Luau editor and FAQ to document all major modules: Vital, Heading, Core, Safety, Inventory, and Visuals.</p>
+            <h3>v1.1 — Released website</h3>
+            <p>FAQ to document all major modules: Vital, Heading, Core, Safety, Inventory, and Visuals.</p>
           </article>
         </div>
       </section>
