@@ -194,108 +194,11 @@ getgenv().NEVERLOSEAGAINWITHOKBYE_LOL = {
 }
 ]]</span>
 
-<span class="tok-fn">getgenv</span>()<span class="tok-op">.</span>okbye_lol <span class="tok-op">=</span> {
-    [<span class="tok-str">"Vital"</span>] <span class="tok-op">=</span> {
-        Key <span class="tok-op">=</span> <span class="tok-str">"your key here"</span>,
-        FpsCap <span class="tok-op">=</span> <span class="tok-num">160</span>,
-        UnloadKey <span class="tok-op">=</span> Enum.KeyCode.End,
-        UnvisersalMode <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-    },
-    [<span class="tok-str">"Heading"</span>] <span class="tok-op">=</span> {
-        [<span class="tok-str">"SilentAim"</span>] <span class="tok-op">=</span> {
-            HitChance <span class="tok-op">=</span> <span class="tok-num">100</span>,
-            CheckIfLethal <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            AimPart <span class="tok-op">=</span> <span class="tok-str">"Closest"</span>,
-            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
-            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
-            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            AimKey <span class="tok-op">=</span> Enum.KeyCode.Q,
-        },
-        [<span class="tok-str">"TriggerBot"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
-            Delay <span class="tok-op">=</span> <span class="tok-num">0</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            VisibleCheck <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            TriggerKey <span class="tok-op">=</span> Enum.KeyCode.E,
-        },
-        [<span class="tok-str">"Camlock"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            AimPart <span class="tok-op">=</span> <span class="tok-str">"Head"</span>,
-            Prediction <span class="tok-op">=</span> <span class="tok-num">0.165</span>,
-            Fov <span class="tok-op">=</span> <span class="tok-num">100</span>,
-            ShowFov <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            Smoothness <span class="tok-op">=</span> <span class="tok-num">0.1</span>,
-            Jitter <span class="tok-op">=</span> <span class="tok-num">0</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-        },
-    },
-    [<span class="tok-str">"Core"</span>] <span class="tok-op">=</span> {
-        WalkSpeed <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Speed <span class="tok-op">=</span> <span class="tok-num">16</span>,
-        },
-        JumpPower <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Power <span class="tok-op">=</span> <span class="tok-num">50</span>,
-        },
-        NoRecoil <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-        NoSpread <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-    },
-    [<span class="tok-str">"Safety"</span>] <span class="tok-op">=</span> {
-        AntiKick <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-        WhitelistedPlayers <span class="tok-op">=</span> {
-            <span class="tok-str">"Player1"</span>,
-            <span class="tok-str">"Player2"</span>,
-        },
-        AntiCurve <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-    },
-    [<span class="tok-str">"Inventory"</span>] <span class="tok-op">=</span> {
-        Slots <span class="tok-op">=</span> {
-            [<span class="tok-num">1</span>] <span class="tok-op">=</span> <span class="tok-str">"Double Barrel"</span>,
-            [<span class="tok-num">2</span>] <span class="tok-op">=</span> <span class="tok-str">"Revolver"</span>,
-            [<span class="tok-num">3</span>] <span class="tok-op">=</span> <span class="tok-str">"SMG"</span>,
-            [<span class="tok-num">4</span>] <span class="tok-op">=</span> <span class="tok-str">"Tactical Shotgun"</span>,
-            [<span class="tok-num">5</span>] <span class="tok-op">=</span> <span class="tok-str">"Shotgun"</span>,
-            [<span class="tok-num">6</span>] <span class="tok-op">=</span> <span class="tok-str">"Assault Rifle"</span>,
-            [<span class="tok-num">7</span>] <span class="tok-op">=</span> <span class="tok-str">"Sniper Rifle"</span>,
-            [<span class="tok-num">8</span>] <span class="tok-op">=</span> <span class="tok-str">"Rocket Launcher"</span>,
-            [<span class="tok-num">9</span>] <span class="tok-op">=</span> <span class="tok-str">"Pistol"</span>,
-        },
-    },
-    [<span class="tok-str">"Visuals"</span>] <span class="tok-op">=</span> {
-        Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-        [<span class="tok-str">"Boxes"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">0</span>, <span class="tok-num">0</span>),
-        },
-        [<span class="tok-str">"Names"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">255</span>),
-        },
-        [<span class="tok-str">"HealthBars"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">true</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-        },
-        [<span class="tok-str">"Snaplines"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">0</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
-        },
-        [<span class="tok-str">"Distance"</span>] <span class="tok-op">=</span> {
-            Enabled <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            TeamCheck <span class="tok-op">=</span> <span class="tok-kw">false</span>,
-            Color <span class="tok-op">=</span> Color3.fromRGB(<span class="tok-num">255</span>, <span class="tok-num">255</span>, <span class="tok-num">0</span>),
-        },
-    },
+            
 }</code></pre>
         </div>
       </section>
-
+      
 
       <section id="supported" class="section">
         <p class="eyebrow">SUPPORT MATRIX</p>
